@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="PhotoPicker-1.0.3">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/photoouter/build/intermediates/exploded-aar/com.github.glassLake/PhotoPicker/1.0.3/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/photoouter/build/intermediates/exploded-aar/com.github.glassLake/PhotoPicker/1.0.3/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/photoouter/build/intermediates/exploded-aar/com.github.glassLake/PhotoPicker/1.0.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.glassLake/PhotoPicker/1.0.3/c656812c70631adea19a33a414bdb4a8b94846c2/PhotoPicker-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

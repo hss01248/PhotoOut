@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="AdvancedLuban-1.0.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/photoouter/build/intermediates/exploded-aar/com.github.hss01248/AdvancedLuban/1.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/photoouter/build/intermediates/exploded-aar/com.github.hss01248/AdvancedLuban/1.0.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hss01248/AdvancedLuban/1.0.0/d4762e44bec13ca51d9f3c478bcb6e20536e8b02/AdvancedLuban-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
