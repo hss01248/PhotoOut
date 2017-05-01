@@ -1,1 +1,1 @@
-include ':app', ':photoouter'
+include ':app', ':glide',":fresco"

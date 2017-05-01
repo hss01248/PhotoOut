@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PhotoOut.iml" filepath="$PROJECT_DIR$/PhotoOut.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhotoOut.iml" filepath="$PROJECT_DIR$/PhotoOut.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fresco/fresco.iml" filepath="$PROJECT_DIR$/fresco/fresco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glide/glide.iml" filepath="$PROJECT_DIR$/glide/glide.iml" />
       <module fileurl="file://$PROJECT_DIR$/photoouter/photoouter.iml" filepath="$PROJECT_DIR$/photoouter/photoouter.iml" />
     </modules>
   </component>

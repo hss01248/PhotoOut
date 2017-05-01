@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <!-- <paths>
+    <external-path path="" name="camera_photos" />
+</paths>-->
+    <paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <root-path path="" name="camera_photos" />
+    </paths>
+</resources>

@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
     Button pick1;
     @Bind(R.id.activity_main)
     LinearLayout activityMain;
+    PhotoCallback callback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,31 +36,37 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
        // PhotoUtil.init(getApplicationContext(),R.color.colorPrimaryDark,R.color.colorPrimary);
-        PhotoUtil.init(getApplicationContext());
+
+
+        callback = ProxyTools.getShowMethodInfoProxy(new PhotoCallback() {
+            @Override
+            public void onFail(String msg, Throwable r, int requestCode) {
+
+            }
+
+            @Override
+            public void onSuccessSingle(String originalPath, String compressedPath, int requestCode) {
+
+            }
+
+            @Override
+            public void onSuccessMulti(List<String> originalPaths, List<String> compressedPaths, int requestCode) {
+
+            }
+
+            @Override
+            public void onCancel(int requestCode) {
+
+            }
+        });
     }
 
     @OnClick({R.id.camera, R.id.pick1_crop, R.id.pic9, R.id.pick1})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.camera:
-                PhotoUtil.cropAvatar(false)
-                        .start(this, new PhotoCallback() {
-                            @Override
-                            public void onCancel() {
-                                super.onCancel();
-                            }
-
-                            @Override
-                            public void onFail(String msg, Throwable r) {
-                                super.onFail(msg, r);
-                            }
-
-                            @Override
-                            public void onSuccessSingle(String originalPath, String compressedPath) {
-                                super.onSuccessSingle(originalPath, compressedPath);
-
-                            }
-                });
+                PhotoUtil.cropAvatar(true)
+                        .start(this, 23, callback);
                 break;
             case R.id.pick1_crop:
                 PhotoUtil.begin()
@@ -67,75 +74,25 @@ public class MainActivity extends Activity {
                         .setMaxSelectCount(1)
                         .setNeedCropWhenOne(true)
                         .setCropRatio(16,9)
-                        .start(this, new PhotoCallback() {
-                            @Override
-                            public void onFail(String msg, Throwable r) {
-                                super.onFail(msg, r);
-                            }
-
-                            @Override
-                            public void onSuccessMulti(List<String> originalPaths, List<String> compressedPaths) {
-                                super.onSuccessMulti(originalPaths, compressedPaths);
-                            }
-
-                            @Override
-                            public void onSuccessSingle(String originalPath, String compressedPath) {
-                                super.onSuccessSingle(originalPath, compressedPath);
-                            }
-
-                            @Override
-                            public void onCancel() {
-                                super.onCancel();
-                            }
-                        });
+                        .start(this, 77, callback);
                 break;
             case R.id.pic9:
                 PhotoUtil.multiSelect(9)
-                        .start(this, new PhotoCallback() {
-                            @Override
-                            public void onFail(String msg, Throwable r) {
-                                super.onFail(msg, r);
-                            }
-
-                            @Override
-                            public void onCancel() {
-                                super.onCancel();
-                            }
-
-                            @Override
-                            public void onSuccessMulti(List<String> originalPaths, List<String> compressedPaths) {
-                                super.onSuccessMulti(originalPaths, compressedPaths);
-                            }
-                        });
+                        .start(this, 55, callback);
                 break;
             case R.id.pick1:
                 PhotoUtil.begin()
-                        .setFromCamera(false)
+                        .setNeedCropWhenOne(true)
+                        .setNeedCompress(true)
+                        .setMaxSelectCount(1)
+                        .setCropMuskOval()
+                        .setSelectGif()
+                        /*.setFromCamera(false)
                         .setMaxSelectCount(5)
                         .setNeedCropWhenOne(false)
                         .setNeedCompress(true)
-                        .setCropRatio(16,9)
-                        .start(this, new PhotoCallback() {
-                            @Override
-                            public void onCancel() {
-                                super.onCancel();
-                            }
-
-                            @Override
-                            public void onFail(String msg, Throwable r) {
-                                super.onFail(msg, r);
-                            }
-
-                            @Override
-                            public void onSuccessMulti(List<String> originalPaths, List<String> compressedPaths) {
-                                super.onSuccessMulti(originalPaths, compressedPaths);
-                            }
-
-                            @Override
-                            public void onSuccessSingle(String originalPath, String compressedPath) {
-                                super.onSuccessSingle(originalPath, compressedPath);
-                            }
-                        });
+                        .setCropRatio(16,9)*/
+                        .start(this, 33, callback);
                 break;
         }
     }

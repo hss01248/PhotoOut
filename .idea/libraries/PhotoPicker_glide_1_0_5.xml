@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="PhotoPicker-glide-1.0.5">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/glide/build/intermediates/exploded-aar/com.github.hss01248.PhotoPicker/PhotoPicker-glide/1.0.5/res" />
+      <root url="jar://$PROJECT_DIR$/glide/build/intermediates/exploded-aar/com.github.hss01248.PhotoPicker/PhotoPicker-glide/1.0.5/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.hss01248.PhotoPicker/PhotoPicker-glide/1.0.5/bbfe5c23f11de83fe6a8c5c9cc9c6212b81d68c3/PhotoPicker-glide-1.0.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
