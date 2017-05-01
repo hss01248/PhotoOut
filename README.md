@@ -1,9 +1,17 @@
 # PhotoOut
 [![](https://jitpack.io/v/hss01248/PhotoOut.svg)](https://jitpack.io/#hss01248/PhotoOut)
 
-拍照/图片选择--裁剪--压缩 一条龙
+拍照/图片选择--裁剪--压缩 一条龙,兼容7.0,支持fresco和glide.多种自定义配置.
 
 
+
+> 一条龙地支持fresco和glide
+
+图片加载:[ImageLoader](https://github.com/hss01248/ImageLoader)  -->> 图片选择: [PhotoPicker](https://github.com/hss01248/PhotoPicker)  -->>拍照/选图/裁剪/压缩: [PhotoOut](https://github.com/hss01248/PhotoOut)
+
+> glide和fresco都支持:
+>
+> 
 
 # 示例图
 
@@ -48,7 +56,8 @@ Add it in your root build.gradle at the end of repositories:
 
 ```
     dependencies {
-            compile 'com.github.hss01248:PhotoOut:1.0.0'
+            compile 'com.github.hss01248.PhotoOut:fresco:1.0.1'//底层支持为fresco
+            compile 'com.github.hss01248.PhotoOut:glide:1.0.1'//底层支持为glide
     }
 ```
 
@@ -240,7 +249,9 @@ public abstract class PhotoCallback {
 
 # 引用
 
-https://github.com/glassLake/PhotoPicker
+https://github.com/hss01248/ImageLoader
+
+https://github.com/hss01248/PhotoPicker
 
 https://github.com/hss01248/PicCrop
 
