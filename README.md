@@ -1,17 +1,15 @@
 # PhotoOut
 [![](https://jitpack.io/v/hss01248/PhotoOut.svg)](https://jitpack.io/#hss01248/PhotoOut)
 
-拍照/图片选择--裁剪--压缩 一条龙,兼容7.0,支持fresco和glide.多种自定义配置.
+拍照/图片选择--裁剪--压缩 一条龙,兼容7.0,支持fresco和glide,Picasso.多种自定义配置.
 
 
 
-> 一条龙地支持fresco和glide
+> 一条龙地支持fresco和glide,Picasso
 
 图片加载:[ImageLoader](https://github.com/hss01248/ImageLoader)  -->> 图片选择: [PhotoPicker](https://github.com/hss01248/PhotoPicker)  -->>拍照/选图/裁剪/压缩: [PhotoOut](https://github.com/hss01248/PhotoOut)
 
-> glide和fresco都支持:
->
-> 
+
 
 # 示例图
 
@@ -56,8 +54,11 @@ Add it in your root build.gradle at the end of repositories:
 
 ```
     dependencies {
-            compile 'com.github.hss01248.PhotoOut:fresco:1.0.1'//底层支持为fresco
-            compile 'com.github.hss01248.PhotoOut:glide:1.0.1'//底层支持为glide
+    		compile'com.github.hss01248.PhotoPicker:
+    		//以下的三选一即可:
+            compile'com.github.hss01248.PhotoPicker:glide:1.0.6'
+    		compile'com.github.hss01248.PhotoPicker:fresco:1.0.6'
+    		compile'com.github.hss01248.PhotoPicker:picasso:1.0.6'
     }
 ```
 
@@ -68,7 +69,7 @@ Add it in your root build.gradle at the end of repositories:
 传入context
 
 ```
-init(Context context)
+PhotoUtil.init(getApplicationContext(),new GlideIniter());//第二个参数根据具体依赖库而定
 ```
 
 ## 裁剪头像

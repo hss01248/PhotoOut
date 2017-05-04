@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.elvishew.xlog.LogLevel;
 import com.elvishew.xlog.XLog;
+import com.hss01248.frescopicker.FrescoIniter;
 import com.hss01248.photoouter.PhotoUtil;
 
 /**
@@ -15,7 +16,7 @@ public class BaseApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        PhotoUtil.init(getApplicationContext());
+        PhotoUtil.init(getApplicationContext(),new FrescoIniter());
         //Logger.initialize(new Settings());
         XLog.init(LogLevel.ALL);
     }

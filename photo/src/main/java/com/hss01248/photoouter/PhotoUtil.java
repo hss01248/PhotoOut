@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import me.iwf.photopicker.PhotoPickUtils;
 import me.iwf.photopicker.PhotoPicker;
 import me.iwf.photopicker.PhotoPreview;
+import me.iwf.photopicker.utils.Initer;
 
 /**
  * Created by Administrator on 2017/2/15 0015.
@@ -40,18 +41,18 @@ public class PhotoUtil {
     public static @ColorInt int statusBarColor;
     public static boolean isDebug ;
 
-    public static void init(Context context){
-        init(context,R.color.colorPrimaryDark,R.color.colorPrimary);
+    public static void init(Context context, Initer initer){
+        init(context,initer,R.color.colorPrimaryDark,R.color.colorPrimary);
         isDebug = MyTool.isApkDebugable(context);
     }
 
 
 
-    private static void init(Context context1, @ColorRes int statusBarColorRes, @ColorRes int titleBarColorRes){
+    private static void init(Context context1, Initer initer,@ColorRes int statusBarColorRes, @ColorRes int titleBarColorRes){
         context = context1;
         statusBarColor = context1.getResources().getColor(statusBarColorRes);
         titleBarColor = context1.getResources().getColor(titleBarColorRes);
-        PhotoPickUtils.init(context1);
+        PhotoPickUtils.init(context1,initer);
 
     }
 
