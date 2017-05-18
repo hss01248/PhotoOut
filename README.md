@@ -54,7 +54,7 @@ Add it in your root build.gradle at the end of repositories:
 
 ```
     dependencies {
-    		compile'com.github.hss01248.PhotoOut:1.0.2'
+    		compile'com.github.hss01248:PhotoOut:1.0.2'
    		//以下的三选一即可:
             	compile'com.github.hss01248.PhotoPicker:glide:1.0.7'
     		compile'com.github.hss01248.PhotoPicker:fresco:1.0.7'
